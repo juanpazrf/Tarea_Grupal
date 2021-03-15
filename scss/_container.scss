@@ -1,0 +1,163 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  5px  7% auto auto 7% 10px;
+    gap: 10px;
+    grid-template-areas:
+    "window  window  window"
+    "header  header  header"
+    "nav     nav     nav"
+    "article   article  article"
+    "footer  footer  footer"
+    "footer4 footer4 footer4";
+    width: 80%;
+    margin: auto;
+    height: 100hv;
+    border: 1px solid black;
+
+}
+
+@media screen and (max-width: 550px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6% auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+    gap: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+   
+    .window{
+        display:none;
+    }
+    header{
+      border: none;
+       #titulo{
+        font-size: x-large;
+       } 
+        figure{
+            display: none;
+        }
+    }
+    nav{
+        flex-direction: column;
+        .bars {
+            background: none;
+            color: white;
+            border:none;
+            text-decoration: none;
+            display: block;
+            font-size: 1.8em;
+            padding: 0.2em 0.5em;
+            cursor: pointer;
+        } 
+        a{
+            border: none;
+            width: 100%;
+         }
+    #buscador_web{
+        display:none;
+    }
+ 
+    }
+    article{
+    border: none;
+    margin: 0;
+        fieldset{
+        border: none;
+        margin: 0 20px;
+            legend{
+            padding-top: 18px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+            }
+            .etiquetas{
+                label{
+                display: block;
+                width: 170px;
+                }
+                input{
+                width: 280px;
+                }   
+                #input_codigo{
+                width: 205px;
+                }
+                #ancho_select{
+                width: 279px;
+                }
+                #label_etiqueta{
+                display: inline-flex;
+                justify-items: right;
+                width: 240px;
+                }
+                #label_fecha{
+                width: 140px;
+                display: inline-flex;
+                }
+                .radio{
+                width: 150px;
+                margin-top: 14px;
+                }
+                #label_impuesto{
+                display: inline-flex;
+                justify-items: right;
+                width: 110px;       
+                }
+                #label_foto{
+                width: 40px;
+                display: inline-flex;
+                justify-content: right;
+                }             
+                .textarea{
+                display: block;
+                }
+                .button{
+                display: flex;
+                justify-content: center;
+                .submit{
+                width: 100px;
+                height: 60px;
+                border-radius: 0px;
+                transition-property: background-color color;
+                transition-duration: 3s;
+                    &:hover{
+                    background-color: crimson; color: darkblue;
+                    }
+                }
+                .reset{
+                width: 100px;
+                height: 60px;
+                border-radius: 0px;
+                color: white;
+                transition-property: background-color color;
+                transition-duration: 3s;
+                    &:hover{
+                    background-color: crimson; color: darkblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+    background-color: rgb(240, 11, 41);
+    display: block;
+    a{  
+        color:red;
+        border-bottom: 1px solid black;
+        transition: all 0.6s linear;
+        height: 2em;
+            &:hover{          
+            color:blue);
+            }
+        }
+    }
+ 
+    }
+}

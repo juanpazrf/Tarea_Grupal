@@ -1,0 +1,87 @@
+article{
+    grid-area: article;
+    margin-right: 10px;
+    border: 1px solid black;
+    background-color: $color-menuformulario;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    margin: 0.3% 17%;
+    fieldset{
+     margin: 2% 3% 3% 8%;
+        legend{
+            margin-left: 2%;
+        }
+        .etiquetas{
+            padding: 20px;
+        label{
+            display: inline-flex;
+            justify-content: right;
+            width: 180px;
+        }
+        input{
+            width: 170px;
+         
+        }
+        .radio{
+          margin-left: -55px;
+          display: inline-flex;
+          width: 175px;
+          button{ 
+              text-align: center;
+            }
+            label{
+                margin-left: -40px;
+            }
+        } 
+        #input_etiqueta{
+            width: 30px;
+        } 
+        #input_fecha{
+            width: 125px;
+            background-color: lightblue;;
+            border: none;
+        }        
+        .textarea{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            .submit{
+              margin-right: 50px;
+              width: 100px;
+              height: 30px;
+              border-radius: 10px;
+              background-color: rgb(27, 95, 107);
+              color: white;
+              transition-property: background-color color border-radius;
+              transition-duration: 3s;
+              &:hover{
+                background-color: forestgreen; color: black; border-radius: 0;
+                }
+            }
+            .reset{
+                margin-right: 50px;
+                width: 100px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: rgb(27, 95, 107);
+                color: white;
+                transition-property: background-color color border-radius;
+                transition-duration: 3s;
+                &:hover{
+                    background-color: forestgreen; color: black; border-radius: 0;
+                }
+            }
+        }    
+
+        #button_validar{
+            width: 65px;
+            background-color: gray;
+            color: white;
+            }
+        }
+    }   
+}

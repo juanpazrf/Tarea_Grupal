@@ -1,0 +1,47 @@
+
+header{
+    grid-area: header;
+    display: inline-flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: blue;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-name: colorfondo_header;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    #titulo{
+        margin: auto;
+        font-size: xx-large;
+     }
+     figure{
+        display: inline-flex;
+        img{
+            margin: auto;
+           height: 45px;
+           width: 45px;
+           clip-path: circle(50% at 50% 50%);
+           filter: opacity(60%);
+           }
+        figcaption{
+            margin: auto;
+            font-size: small;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;            
+            }    
+    }  
+
+}
+@keyframes colorfondo_header{
+    from{background-color: magenta;}
+    25%{background-color: firebrick;}
+    50%{background-color: navy;}
+    75%{background-color: orange;}
+    to{background-color: orangered;}
+    }
+
+.window{
+    grid-area: window;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

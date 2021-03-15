@@ -1,0 +1,31 @@
+@mixin barra_nav_web{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}@mixin footer_web{
+    grid-area: footer;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    a{
+        display: grid;
+        text-decoration: none;
+        color: white;
+        justify-content: center;
+        align-content:  center;
+        transition: all 0.6s linear;
+            &:hover{          
+            color:blue;
+            }
+        }
+}

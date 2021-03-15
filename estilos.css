@@ -1,0 +1,535 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 5px  7% auto auto 7% 10px;
+      grid-template-rows: 5px  7% auto auto 7% 10px;
+  gap: 10px;
+      grid-template-areas: "window  window  window"
+ "header  header  header"
+ "nav     nav     nav"
+ "article   article  article"
+ "footer  footer  footer"
+ "footer4 footer4 footer4";
+  width: 80%;
+  margin: auto;
+  height: 100hv;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 6% auto auto auto;
+        grid-template-rows: 6% auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "article"
+ "footer";
+    gap: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .container .window {
+    display: none;
+  }
+  .container header {
+    border: none;
+  }
+  .container header #titulo {
+    font-size: x-large;
+  }
+  .container header figure {
+    display: none;
+  }
+  .container nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container nav .bars {
+    background: none;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: block;
+    font-size: 1.8em;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+  }
+  .container nav a {
+    border: none;
+    width: 100%;
+  }
+  .container nav #buscador_web {
+    display: none;
+  }
+  .container article {
+    border: none;
+    margin: 0;
+  }
+  .container article fieldset {
+    border: none;
+    margin: 0 20px;
+  }
+  .container article fieldset legend {
+    padding-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+  }
+  .container article fieldset .etiquetas label {
+    display: block;
+    width: 170px;
+  }
+  .container article fieldset .etiquetas input {
+    width: 280px;
+  }
+  .container article fieldset .etiquetas #input_codigo {
+    width: 205px;
+  }
+  .container article fieldset .etiquetas #ancho_select {
+    width: 279px;
+  }
+  .container article fieldset .etiquetas #label_etiqueta {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-items: right;
+    width: 240px;
+  }
+  .container article fieldset .etiquetas #label_fecha {
+    width: 140px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .container article fieldset .etiquetas .radio {
+    width: 150px;
+    margin-top: 14px;
+  }
+  .container article fieldset .etiquetas #label_impuesto {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-items: right;
+    width: 110px;
+  }
+  .container article fieldset .etiquetas #label_foto {
+    width: 40px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .container article fieldset .etiquetas .textarea {
+    display: block;
+  }
+  .container article fieldset .etiquetas .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container article fieldset .etiquetas .button .submit {
+    width: 100px;
+    height: 60px;
+    border-radius: 0px;
+    -webkit-transition-property: background-color color;
+    transition-property: background-color color;
+    -webkit-transition-duration: 3s;
+            transition-duration: 3s;
+  }
+  .container article fieldset .etiquetas .button .submit:hover {
+    background-color: crimson;
+    color: darkblue;
+  }
+  .container article fieldset .etiquetas .button .reset {
+    width: 100px;
+    height: 60px;
+    border-radius: 0px;
+    color: white;
+    -webkit-transition-property: background-color color;
+    transition-property: background-color color;
+    -webkit-transition-duration: 3s;
+            transition-duration: 3s;
+  }
+  .container article fieldset .etiquetas .button .reset:hover {
+    background-color: crimson;
+    color: darkblue;
+  }
+  .container footer {
+    background-color: blue;
+    display: block;
+  }
+  .container footer a {
+    border-bottom: 1px solid black;
+    -webkit-transition: all 0.6s linear;
+    transition: all 0.6s linear;
+    height: 2em;
+  }
+  .container footer a:hover {
+    color: #d34f81;
+  }
+}
+
+header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: gray;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-animation-name: colorfondo_header;
+          animation-name: colorfondo_header;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+header #titulo {
+  margin: auto;
+  font-size: xx-large;
+}
+
+header figure {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header figure img {
+  margin: auto;
+  height: 45px;
+  width: 45px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+
+header figure figcaption {
+  margin: auto;
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@-webkit-keyframes colorfondo_header {
+  from {
+    background-color: magenta;
+  }
+  25% {
+    background-color: firebrick;
+  }
+  50% {
+    background-color: navy;
+  }
+  75% {
+    background-color: orange;
+  }
+  to {
+    background-color: orangered;
+  }
+}
+
+@keyframes colorfondo_header {
+  from {
+    background-color: magenta;
+  }
+  25% {
+    background-color: firebrick;
+  }
+  50% {
+    background-color: navy;
+  }
+  75% {
+    background-color: orange;
+  }
+  to {
+    background-color: orangered;
+  }
+}
+
+.window {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: window;
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+nav .bars {
+  display: none;
+}
+
+nav a {
+  display: -ms-grid;
+  display: grid;
+  text-decoration: none;
+  color: white;
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 110px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+nav a button {
+  background-color: gray;
+  border: none;
+}
+
+nav a button img {
+  width: 35px;
+  height: 33px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+nav #buscador_web {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+nav #buscador_web .buscar_web {
+  font-size: small;
+  padding-top: 15px;
+}
+
+nav #buscador_web button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 50px;
+  width: 50px;
+}
+
+nav #buscador_web button img {
+  height: 30px;
+  width: 40px;
+}
+
+article {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: article;
+  margin-right: 10px;
+  border: 2px solid black;
+  background-color: lightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  margin: 0.3% 17%;
+}
+
+article fieldset {
+  margin: 2% 3% 3% 8%;
+}
+
+article fieldset legend {
+  margin-left: 2%;
+}
+
+article fieldset .etiquetas {
+  padding: 20px;
+}
+
+article fieldset .etiquetas label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 180px;
+}
+
+article fieldset .etiquetas input {
+  width: 170px;
+}
+
+article fieldset .etiquetas .radio {
+  margin-left: -55px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 175px;
+}
+
+article fieldset .etiquetas .radio button {
+  text-align: center;
+}
+
+article fieldset .etiquetas .radio label {
+  margin-left: -40px;
+}
+
+article fieldset .etiquetas #input_etiqueta {
+  width: 30px;
+}
+
+article fieldset .etiquetas #input_fecha {
+  width: 125px;
+  background-color: lightblue;
+  border: none;
+}
+
+article fieldset .etiquetas .textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article fieldset .etiquetas .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+article fieldset .etiquetas .button .submit {
+  margin-right: 50px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #1b5f6b;
+  color: white;
+  -webkit-transition-property: background-color color border-radius;
+  transition-property: background-color color border-radius;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+article fieldset .etiquetas .button .submit:hover {
+  background-color: forestgreen;
+  color: black;
+  border-radius: 0;
+}
+
+article fieldset .etiquetas .button .reset {
+  margin-right: 50px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #1b5f6b;
+  color: white;
+  -webkit-transition-property: background-color color border-radius;
+  transition-property: background-color color border-radius;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+article fieldset .etiquetas .button .reset:hover {
+  background-color: forestgreen;
+  color: black;
+  border-radius: 0;
+}
+
+article fieldset .etiquetas #button_validar {
+  width: 65px;
+  background-color: gray;
+  color: white;
+}
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background-color: gray;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+
+footer a {
+  display: -ms-grid;
+  display: grid;
+  text-decoration: none;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+footer a:hover {
+  color: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=estilos.css.map */

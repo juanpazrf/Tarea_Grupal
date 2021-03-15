@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto_Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="container">
+    <div class="window">window name</div>  
+    <header>     
+        <p id="titulo">Sistema integrado de gestión</p>
+        <figure>
+            <img src="img/user.png" alt="imagendeusuario">
+            <figcaption> Usuario 1</figcaption>
+        </figure> 
+    </header>
+    <nav>
+        <a class="bars" href="#">&#9776;</a>
+        <a id="active" href=""><button type="button"><img src="img/inicio.png"></button>Inicio</a>
+                    
+        <a id="active" href=""><button type="button"><img src="img/usuario.png"></button>Usuarios</a>
+                   
+        <a id="active" href=""><button type="button"><img src="img/clientes.png"></button>Clientes</a>
+                   
+        <a id="active" href=""><button type="button"><img src="img/proveedores.png"></button>Proveedores</a>
+                    
+        <a id="active" href=""><button type="button"><img  src="img/productos.png"></button>Productos</a>
+            </ul>
+        <div id="buscador_web">
+        <div class="buscar_web">
+            <label for="buscar">Buscar en la Web</label>
+            <input type="search" id="buscar" name="search">
+        </div>
+        <button type="submit"><img src="img/lupa.png" alt="botonbuscador">Buscar</button>
+    </div>
+    </nav>
+    <article >
+            <fieldset>
+                <legend>Agregar Producto</legend>
+                <form action="formulario" method="POST">
+                <div class="etiquetas">
+                    <label for="codigo">Código*</label>
+                    <input id="input_codigo"  type="tel" id="codigo" name="codigo" required pattern="[0-9]{6}" title="Debe ingresar solo 6 números" required>
+                    <input id="button_validar" type="submit" id="validar" name="validar" value="Validar">
+                    <br><br>
+                    <label  for="nombre">Nombre*</label>
+                    <input id="input_nombre" type="text" id="nombre" name="nombre" required  pattern="[a-zA-Z0-9\s]{1,100}" size="30" placeholder="solo letras y números" title="Solo letras y números"> 
+                    <br><br>
+                    <label for="Abreviatura">Abreviatura*</label>
+                    <input type="text" id="abreviatura" placeholder="Solo letras" pattern="[a-zA-Z\s\.]{2,10}" title="Solo letras">
+                    <br><br>
+                    <label for="opciones">Categoria*</label>
+                    <select id="ancho_select"  id="opciones" name="opciones" required>
+                        <option value=""></option>
+                        <option>Lácteos</option>
+                        <option>Lista cerrada elementos</option>
+                        <option>Panes especiales</option>
+                        <option>Pasteles</option>
+                    </select>
+                    <br><br>
+                    <label for="ruc">RUC Proveedor*</label>
+                    <input type="tel" id="RUC" maxlength="11"pattern="[0-9]{11}" placeholder="Solo números" title="Solo números" required>
+                    <br><br>
+                    <label for="precio">Precio* :</label>
+                    <input type="number" min="0" step="0.01" max="10000000" pattern="[0-9]" id="precio" required>
+                    <br><br>
+                    <label id="label_etiqueta"  for="etiqueta">Color de etiqueta</label>
+                    <input id="input_etiqueta" type="color" id="etiqueta" name="etiqueta">
+                    <br><br>
+                    <label id="label_fecha" for="fecha">Fecha*</label>
+                    <input id="input_fecha"  type="date" id="fecha" name="fecha">
+                    <br><br>
+                    <label for="estado">Estado*</label>
+                        <div class="radio">
+                            <input type="radio" id="activo" name="estado">
+                            <label for="activo">activo</label>
+                        </div>    
+                        <div class="radio">   
+                            <input type="radio" id="suspendido" name="estado">
+                            <label for="suspendido">Suspendido</label>
+                        </div>    
+                        <div class="radio">    
+                            <input type="radio" id="de_baja" name="estado">
+                            <label for="de_baja">De baja</label> 
+                        </div>       
+                    <br><br>
+                    <label id="label_impuesto" for="impuesto">Impuesto</label>
+                    <input type="checkbox" id="impuesto" name="impuesto">
+                    <br>
+                    <br>
+                    <label id="label_foto" for="Foto">Foto</label>
+                    <input type="file" id="foto" name="foto" accept=".png,.jpg"></input>
+                    <br><br>
+                    <div class="textarea">
+                        <label for="mensaje">Descripción</label>
+                        <textarea name="mensaje" id="mensaje" rows="4" cols="45"></textarea>
+                    </div>
+                    <br><br>
+                    <div class="button">
+                        <button class="submit" type="submit" value="grabar" name="grabar">Grabar</button>
+                        <button class="reset" type="reset" value="limpiar" name="limpiar">Limpiar</button>
+                    </div>
+                </div>   
+            </fieldset>
+        </form>
+    </article> 
+    <footer>
+            <a href="#" target="_blank">Qué hacemos?</a>
+            <a href="#" target="_blank">Enlaces principales</a>
+            <a href="#" target="_blank">Contáctanos</a>
+    </footer>
+    </div>  
+</body>
+</html>
